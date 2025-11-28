@@ -29,7 +29,7 @@ D HDS1          S             50A
    Total = Price * Quantity;
  
     // Subtraction
-   Total = Price - Discount
+   Total = Price - Discount;
 
    // Division
    Total = Price / Quantity;
