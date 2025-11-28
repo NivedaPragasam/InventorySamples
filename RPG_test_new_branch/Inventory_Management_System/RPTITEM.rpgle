@@ -22,6 +22,17 @@ D HDS1          S             50A
 
       READ ITEMS;
    ENDDO;
+   // Simple addition
+   Total = Price + Tax;
+ 
+    // Multiplication
+   Total = Price * Quantity;
+ 
+    // Subtraction
+   Total = Price - Discount
+
+   // Division
+   Total = Price / Quantity;
 
    *INLR = *ON;
    RETURN;
