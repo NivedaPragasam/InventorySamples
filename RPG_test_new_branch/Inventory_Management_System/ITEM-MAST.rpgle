@@ -67,20 +67,20 @@ C                   MOVELITEMNAME   ITEMNAME
 C                   MOVELUOM        UOM
 C                   MOVELPRICE      PRICE
 C                   MOVELQTYONHAND  QTYONHAND
-C                   WRITEITEMREC
+C                   WRITE ITEMREC
 C                   ENDSR
 
 C*******************************************************
 C* $CHG Update record
 C*******************************************************
 C     $CHG          BEGSR
-C                   CHAINITEMID     ITEMREC
+C                   CHAIN ITEMID     ITEMREC
 C                   IF %FOUND
 C                   MOVELITEMNAME   ITEMNAME
 C                   MOVELUOM        UOM
 C                   MOVELPRICE      PRICE
 C                   MOVELQTYONHAND  QTYONHAND
-C                   UPDATEITEMREC
+C                   UPDATE ITEMREC
 C                   ENDIF
 C                   ENDSR
 
@@ -88,8 +88,8 @@ C*******************************************************
 C* $DEL Delete record
 C*******************************************************
 C     $DEL          BEGSR
-C                   CHAINITEMID     ITEMREC
+C                   CHAIN ITEMID     ITEMREC
 C                   IF %FOUND
-C                   DELETEITEMREC
+C                   DELETE ITEMREC
 C                   ENDIF
 C                   ENDSR
