@@ -1,7 +1,7 @@
 F*******************************************************
 F* STOCK BY LOCATION MAINTENANCE
 F*******************************************************
-FSTKLOCD  CF   E             WORKSTN
+FSTKLOC  CF   E             WORKSTN
 FSTKLOC   UF A E           K DISK
  
 D ITEMID        S              5  0
