@@ -10,7 +10,7 @@ D OPTION          S              1A
  
 /FREE
    *INLR = *OFF;
-   EXSR $INIT;
+   EXSR $INITMENU;
  
    DOU *IN03 = *ON;
  
@@ -26,7 +26,7 @@ D OPTION          S              1A
            EXSR $LOCSTK;
  
         WHEN OPTION = '3';
-           EXSR $POST;
+           EXSR $POSTMENU;
  
         WHEN OPTION = '4';
            EXSR $RPT;
@@ -44,7 +44,7 @@ D OPTION          S              1A
 C*******************************************************
 C* $INIT Initialize screen
 C*******************************************************
-C     $INIT         BEGSR
+C     $INITMENU         BEGSR
 C                   Z-ADD0         OPTION
 C                   ENDSR
  
@@ -65,7 +65,7 @@ C                   ENDSR
 C*******************************************************
 C* $POST Call Transaction Posting
 C*******************************************************
-C     $POST         BEGSR
+C     $POSTMENU         BEGSR
 C                   CALL      'POSTTRAN'
 C                   ENDSR
  
