@@ -13,20 +13,20 @@ D QTYONHAND     S              9  0
  /FREE
    *INLR = *OFF;
 
-   EXSR $INIT;
+   EXSR $INITMAST;
 
    DOU *IN03 = *ON;
 
       EXFMT ITEMSCRN;
 
       IF *IN05 = *ON;     // ADD
-         EXSR $ADD;
+         EXSR $ADDMAST;
       ELSEIF *IN06 = *ON; // UPDATE
-         EXSR $CHG;
+         EXSR $CHGMAST;
       ELSEIF *IN12 = *ON; // DELETE
-         EXSR $DEL;
+         EXSR $DELMAST;
       ELSE;
-         EXSR $LOAD;     // Load record for display
+         EXSR $LOADMAST;     // Load record for display
       ENDIF;
 
    ENDDO;
@@ -38,7 +38,7 @@ D QTYONHAND     S              9  0
 C*******************************************************
 C* $INIT Clear screen
 C*******************************************************
-C     $INIT         BEGSR
+C     $INITMAST         BEGSR
 C                   Z-ADD0         ITEMID
 C                   MOVE *BLANK     ITEMNAME
 C                   MOVE *BLANK     UOM
@@ -49,7 +49,7 @@ C                   ENDSR
 C*******************************************************
 C* $LOAD Load existing item
 C*******************************************************
-C     $LOAD         BEGSR
+C     $LOADMAST         BEGSR
 C                   CHAIN ITEMID   ITEMREC
 C                   IF %FOUND(ITEMS)
 C                   MOVE ITEMNAME   ITEMNAME
@@ -62,7 +62,7 @@ C                   ENDSR
 C*******************************************************
 C* $ADD new record
 C*******************************************************
-C     $ADD          BEGSR
+C     $ADDMAST          BEGSR
 C                   MOVELITEMNAME   ITEMNAME
 C                   MOVELUOM        UOM
 C                   MOVELPRICE      PRICE
@@ -73,7 +73,7 @@ C                   ENDSR
 C*******************************************************
 C* $CHG Update record
 C*******************************************************
-C     $CHG          BEGSR
+C     $CHGMAST          BEGSR
 C                   CHAIN ITEMID     ITEMREC
 C                   IF %FOUND
 C                   MOVELITEMNAME   ITEMNAME
@@ -87,7 +87,7 @@ C                   ENDSR
 C*******************************************************
 C* $DEL Delete record
 C*******************************************************
-C     $DEL          BEGSR
+C     $DELMAST          BEGSR
 C                   CHAIN ITEMID     ITEMREC
 C                   IF %FOUND
 C                   DELETE ITEMREC
