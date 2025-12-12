@@ -1,0 +1,13 @@
+PGM  PARM(&ITEMID)
+
+ 
+
+DCL VAR(&ITEMID) TYPE(*DEC) LEN(5 0)
+
+ 
+
+SNDPGMMSG MSG('LOGCL2: Received Item ' *CAT &ITEMID)
+
+ 
+
+ENDPGM
