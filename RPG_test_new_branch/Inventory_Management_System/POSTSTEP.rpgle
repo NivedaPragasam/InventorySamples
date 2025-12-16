@@ -44,7 +44,7 @@ if sqlstate <> '00000';
    if sqlstate = '02000';
       ErrMsg = 'Customer not found: ' + %trim(Cust);
    else;
-      ErrMsg = 'SQL error. SQLSTATE=' + sqlstate;
+      dsply ('Customer ' + %trim(Cust) + ' -> ' + %trim(CustName));
    endif;
    dsply ErrMsg;
    return;
