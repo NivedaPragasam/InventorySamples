@@ -41,7 +41,7 @@ endif;
 
 /*------------------------------------*/
 
-call 'INVENTLIB/LOGCL2' itemid;
+call 'INVENTLIB/LOGCL2';
 
  
 
