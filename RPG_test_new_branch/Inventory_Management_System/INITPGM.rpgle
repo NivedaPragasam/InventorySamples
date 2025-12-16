@@ -7,20 +7,20 @@ end-pi;
 /FREE
    *INLR = *OFF;
 
-   EXSR $INIT;
+   EXSR $INITPGM;
 
    DOU *IN03 = *ON;
 
       EXFMT ITEMSCRN;
 
       IF *IN05 = *ON;     // ADD
-         EXSR $ADD;
+         EXSR $ADDPGM;
       ELSEIF *IN06 = *ON; // UPDATE
-         EXSR $CHG;
+         EXSR $CHGPGM;
       ELSEIF *IN12 = *ON; // DELETE
-         EXSR $DEL;
+         EXSR $DELPGM;
       ELSE;
-         EXSR $LOAD;     // Load record for display
+         EXSR $LOADPGM;     // Load record for display
       ENDIF;
 
    ENDDO;
