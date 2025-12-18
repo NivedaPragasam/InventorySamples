@@ -67,7 +67,6 @@ C                   MOVELITEMNAME   ITEMNAME
 C                   MOVELUOM        UOM
 C                   MOVELPRICE      PRICE
 C                   MOVELQTYONHAND  QTYONHAND
-C                   WRITE ITEMREC
 C                   ENDSR
 
 C*******************************************************
@@ -80,7 +79,6 @@ C                   MOVELITEMNAME   ITEMNAME
 C                   MOVELUOM        UOM
 C                   MOVELPRICE      PRICE
 C                   MOVELQTYONHAND  QTYONHAND
-C                   UPDATE ITEMREC
 C                   ENDIF
 C                   ENDSR
 
