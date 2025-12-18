@@ -50,11 +50,9 @@ C     $POST         BEGSR
  
 C* Write Transaction Header
 C                   MOVELTRNTYPE   TRNTYPE
-C                   WRITE TRNHDR
  
 C* Write Transaction Detail
 C                   MOVELQTY       QTY
-C                   WritE TRNDET
  
 C* Process Item Master Quantity
 C                   CHAIN ITEMID     ITEMREC
@@ -67,7 +65,6 @@ C                        ADD QTY      QTYONHAND
 C                     WHEN TRNTYPE = 'A'
 C                        MOVE QTY     QTYONHAND
 C                   ENDSL
-C                   UPDATE ITEMREC
 C                   ENDIF
  
 C                   IF %FOUND(STKLOC)
@@ -79,10 +76,8 @@ C                          ADD QTY     QTY
 C                       WHEN TRNTYPE = 'A'
 C                          MOVE QTY    QTY
 C                     ENDSL
-C                     UPDATE STKREC
 C                   ELSE
 C                     MOVELQTY        QTY
-C                     WRITE STKREC
 C                   ENDIF
  
 C                   ENDSR
