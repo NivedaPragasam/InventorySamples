@@ -55,7 +55,6 @@ C* $ADD Add New Stock Record
 C*******************************************************
 C     $ADDSTOCK          BEGSR
 C                   MOVELQTY          QTY
-C                   WRITE STKREC
 C                   ENDSR
  
 C*******************************************************
